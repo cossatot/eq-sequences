@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nrml xmlns="http://openquake.org/xmlns/nrml/0.5">
+
+<fragilityModel id="fm-hazus" assetCategory="buildings" lossCategory="structural">
+
+  <description>Fragility model for HAZUS typologies</description>
+  <limitStates>Slight Moderate Extensive Complete</limitStates>
+
+  <fragilityFunction format="continuous" id="C1H-HC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.062" stddev="0.029"/>
+    <params ls="Moderate" mean="0.124" stddev="0.051"/>
+    <params ls="Extensive" mean="0.355" stddev="0.159"/>
+    <params ls="Complete" mean="0.746" stddev="0.382"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.155" stddev="0.053"/>
+    <params ls="Moderate" mean="0.303" stddev="0.128"/>
+    <params ls="Extensive" mean="0.779" stddev="0.291"/>
+    <params ls="Complete" mean="1.355" stddev="0.599"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1M-HC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.095" stddev="0.042"/>
+    <params ls="Moderate" mean="0.201" stddev="0.087"/>
+    <params ls="Extensive" mean="0.550" stddev="0.222"/>
+    <params ls="Complete" mean="1.044" stddev="0.381"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2H-HC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.067" stddev="0.032"/>
+    <params ls="Moderate" mean="0.182" stddev="0.081"/>
+    <params ls="Extensive" mean="0.518" stddev="0.203"/>
+    <params ls="Complete" mean="1.010" stddev="0.334"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.154" stddev="0.049"/>
+    <params ls="Moderate" mean="0.335" stddev="0.134"/>
+    <params ls="Extensive" mean="0.938" stddev="0.368"/>
+    <params ls="Complete" mean="1.642" stddev="0.636"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2M-HC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.117" stddev="0.061"/>
+    <params ls="Moderate" mean="0.322" stddev="0.144"/>
+    <params ls="Extensive" mean="0.867" stddev="0.346"/>
+    <params ls="Complete" mean="1.391" stddev="0.536"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="MH-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.127" stddev="0.038"/>
+    <params ls="Moderate" mean="0.204" stddev="0.068"/>
+    <params ls="Extensive" mean="0.364" stddev="0.123"/>
+    <params ls="Complete" mean="0.593" stddev="0.339"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC1-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.122" stddev="0.042"/>
+    <params ls="Moderate" mean="0.219" stddev="0.076"/>
+    <params ls="Extensive" mean="0.621" stddev="0.276"/>
+    <params ls="Complete" mean="1.578" stddev="0.602"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2H-HC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.066" stddev="0.030"/>
+    <params ls="Moderate" mean="0.143" stddev="0.064"/>
+    <params ls="Extensive" mean="0.414" stddev="0.169"/>
+    <params ls="Complete" mean="0.875" stddev="0.292"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.157" stddev="0.052"/>
+    <params ls="Moderate" mean="0.276" stddev="0.111"/>
+    <params ls="Extensive" mean="0.770" stddev="0.309"/>
+    <params ls="Complete" mean="1.411" stddev="0.593"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2M-HC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.114" stddev="0.061"/>
+    <params ls="Moderate" mean="0.260" stddev="0.127"/>
+    <params ls="Extensive" mean="0.730" stddev="0.306"/>
+    <params ls="Complete" mean="1.216" stddev="0.513"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.140" stddev="0.054"/>
+    <params ls="Moderate" mean="0.270" stddev="0.111"/>
+    <params ls="Extensive" mean="0.780" stddev="0.330"/>
+    <params ls="Complete" mean="1.657" stddev="0.542"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1M-HC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.121" stddev="0.063"/>
+    <params ls="Moderate" mean="0.269" stddev="0.124"/>
+    <params ls="Extensive" mean="0.767" stddev="0.324"/>
+    <params ls="Complete" mean="1.512" stddev="0.553"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2H-HC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.066" stddev="0.030"/>
+    <params ls="Moderate" mean="0.148" stddev="0.068"/>
+    <params ls="Extensive" mean="0.427" stddev="0.170"/>
+    <params ls="Complete" mean="1.008" stddev="0.347"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.154" stddev="0.050"/>
+    <params ls="Moderate" mean="0.283" stddev="0.124"/>
+    <params ls="Extensive" mean="0.806" stddev="0.347"/>
+    <params ls="Complete" mean="1.639" stddev="0.586"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2M-HC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.114" stddev="0.062"/>
+    <params ls="Moderate" mean="0.265" stddev="0.124"/>
+    <params ls="Extensive" mean="0.768" stddev="0.335"/>
+    <params ls="Complete" mean="1.429" stddev="0.493"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1H-HC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.084" stddev="0.062"/>
+    <params ls="Moderate" mean="0.176" stddev="0.102"/>
+    <params ls="Extensive" mean="0.460" stddev="0.282"/>
+    <params ls="Complete" mean="1.193" stddev="0.824"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1L-HC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.125" stddev="0.053"/>
+    <params ls="Moderate" mean="0.265" stddev="0.123"/>
+    <params ls="Extensive" mean="0.643" stddev="0.304"/>
+    <params ls="Complete" mean="1.222" stddev="0.480"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1M-HC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.079" stddev="0.037"/>
+    <params ls="Moderate" mean="0.159" stddev="0.075"/>
+    <params ls="Extensive" mean="0.419" stddev="0.202"/>
+    <params ls="Complete" mean="0.852" stddev="0.337"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2H-HC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.077" stddev="0.042"/>
+    <params ls="Moderate" mean="0.159" stddev="0.075"/>
+    <params ls="Extensive" mean="0.485" stddev="0.239"/>
+    <params ls="Complete" mean="1.193" stddev="0.630"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.186" stddev="0.066"/>
+    <params ls="Moderate" mean="0.368" stddev="0.152"/>
+    <params ls="Extensive" mean="0.937" stddev="0.356"/>
+    <params ls="Complete" mean="1.613" stddev="0.836"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2M-HC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.069" stddev="0.035"/>
+    <params ls="Moderate" mean="0.162" stddev="0.084"/>
+    <params ls="Extensive" mean="0.455" stddev="0.193"/>
+    <params ls="Complete" mean="0.965" stddev="0.352"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S3-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.111" stddev="0.036"/>
+    <params ls="Moderate" mean="0.196" stddev="0.074"/>
+    <params ls="Extensive" mean="0.533" stddev="0.213"/>
+    <params ls="Complete" mean="1.199" stddev="0.492"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4H-HC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.067" stddev="0.029"/>
+    <params ls="Moderate" mean="0.137" stddev="0.056"/>
+    <params ls="Extensive" mean="0.391" stddev="0.161"/>
+    <params ls="Complete" mean="0.896" stddev="0.387"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4L-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.178" stddev="0.054"/>
+    <params ls="Moderate" mean="0.327" stddev="0.135"/>
+    <params ls="Extensive" mean="0.808" stddev="0.277"/>
+    <params ls="Complete" mean="1.389" stddev="0.671"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4M-HC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.095" stddev="0.052"/>
+    <params ls="Moderate" mean="0.225" stddev="0.107"/>
+    <params ls="Extensive" mean="0.592" stddev="0.250"/>
+    <params ls="Complete" mean="0.996" stddev="0.377"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W1-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.104" stddev="0.040"/>
+    <params ls="Moderate" mean="0.294" stddev="0.126"/>
+    <params ls="Extensive" mean="0.974" stddev="0.416"/>
+    <params ls="Complete" mean="1.792" stddev="0.484"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W2-HC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.147" stddev="0.058"/>
+    <params ls="Moderate" mean="0.427" stddev="0.168"/>
+    <params ls="Extensive" mean="1.281" stddev="0.538"/>
+    <params ls="Complete" mean="2.188" stddev="0.868"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1H-LC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.062" stddev="0.027"/>
+    <params ls="Moderate" mean="0.091" stddev="0.035"/>
+    <params ls="Extensive" mean="0.170" stddev="0.120"/>
+    <params ls="Complete" mean="0.688" stddev="0.920"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.157" stddev="0.044"/>
+    <params ls="Moderate" mean="0.199" stddev="0.058"/>
+    <params ls="Extensive" mean="0.286" stddev="0.114"/>
+    <params ls="Complete" mean="0.884" stddev="1.041"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1M-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.088" stddev="0.039"/>
+    <params ls="Moderate" mean="0.148" stddev="0.060"/>
+    <params ls="Extensive" mean="0.244" stddev="0.118"/>
+    <params ls="Complete" mean="0.765" stddev="0.825"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2H-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.068" stddev="0.033"/>
+    <params ls="Moderate" mean="0.130" stddev="0.057"/>
+    <params ls="Extensive" mean="0.227" stddev="0.113"/>
+    <params ls="Complete" mean="0.700" stddev="0.741"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.164" stddev="0.042"/>
+    <params ls="Moderate" mean="0.229" stddev="0.062"/>
+    <params ls="Extensive" mean="0.318" stddev="0.115"/>
+    <params ls="Complete" mean="0.843" stddev="0.844"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2M-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.078" stddev="0.048"/>
+    <params ls="Moderate" mean="0.148" stddev="0.084"/>
+    <params ls="Extensive" mean="0.260" stddev="0.175"/>
+    <params ls="Complete" mean="0.856" stddev="0.887"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C3H-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.056" stddev="0.020"/>
+    <params ls="Moderate" mean="0.109" stddev="0.044"/>
+    <params ls="Extensive" mean="0.188" stddev="0.080"/>
+    <params ls="Complete" mean="0.498" stddev="0.444"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C3L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.139" stddev="0.037"/>
+    <params ls="Moderate" mean="0.208" stddev="0.048"/>
+    <params ls="Extensive" mean="0.282" stddev="0.085"/>
+    <params ls="Complete" mean="0.629" stddev="0.515"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C3M-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.063" stddev="0.029"/>
+    <params ls="Moderate" mean="0.130" stddev="0.076"/>
+    <params ls="Extensive" mean="0.224" stddev="0.121"/>
+    <params ls="Complete" mean="0.607" stddev="0.536"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="MH-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.131" stddev="0.030"/>
+    <params ls="Moderate" mean="0.205" stddev="0.064"/>
+    <params ls="Extensive" mean="0.353" stddev="0.116"/>
+    <params ls="Complete" mean="0.589" stddev="0.363"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC1-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.133" stddev="0.038"/>
+    <params ls="Moderate" mean="0.189" stddev="0.054"/>
+    <params ls="Extensive" mean="0.305" stddev="0.101"/>
+    <params ls="Complete" mean="0.479" stddev="0.238"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2H-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.063" stddev="0.028"/>
+    <params ls="Moderate" mean="0.109" stddev="0.051"/>
+    <params ls="Extensive" mean="0.181" stddev="0.080"/>
+    <params ls="Complete" mean="0.623" stddev="0.680"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.161" stddev="0.042"/>
+    <params ls="Moderate" mean="0.202" stddev="0.052"/>
+    <params ls="Extensive" mean="0.262" stddev="0.082"/>
+    <params ls="Complete" mean="0.796" stddev="0.859"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2M-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.074" stddev="0.037"/>
+    <params ls="Moderate" mean="0.114" stddev="0.069"/>
+    <params ls="Extensive" mean="0.206" stddev="0.159"/>
+    <params ls="Complete" mean="0.780" stddev="0.829"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.159" stddev="0.041"/>
+    <params ls="Moderate" mean="0.220" stddev="0.059"/>
+    <params ls="Extensive" mean="0.320" stddev="0.105"/>
+    <params ls="Complete" mean="0.777" stddev="0.637"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1M-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.081" stddev="0.052"/>
+    <params ls="Moderate" mean="0.140" stddev="0.082"/>
+    <params ls="Extensive" mean="0.244" stddev="0.133"/>
+    <params ls="Complete" mean="0.783" stddev="0.680"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2H-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.066" stddev="0.027"/>
+    <params ls="Moderate" mean="0.114" stddev="0.053"/>
+    <params ls="Extensive" mean="0.206" stddev="0.076"/>
+    <params ls="Complete" mean="0.556" stddev="0.523"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.165" stddev="0.044"/>
+    <params ls="Moderate" mean="0.222" stddev="0.059"/>
+    <params ls="Extensive" mean="0.322" stddev="0.104"/>
+    <params ls="Complete" mean="0.648" stddev="0.481"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2M-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.080" stddev="0.050"/>
+    <params ls="Moderate" mean="0.140" stddev="0.088"/>
+    <params ls="Extensive" mean="0.232" stddev="0.134"/>
+    <params ls="Complete" mean="0.697" stddev="0.685"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1H-LC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.086" stddev="0.052"/>
+    <params ls="Moderate" mean="0.138" stddev="0.068"/>
+    <params ls="Extensive" mean="0.238" stddev="0.153"/>
+    <params ls="Complete" mean="0.629" stddev="0.736"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1L-LC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.079" stddev="0.043"/>
+    <params ls="Moderate" mean="0.134" stddev="0.073"/>
+    <params ls="Extensive" mean="0.196" stddev="0.102"/>
+    <params ls="Complete" mean="0.469" stddev="0.476"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1M-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.076" stddev="0.032"/>
+    <params ls="Moderate" mean="0.126" stddev="0.055"/>
+    <params ls="Extensive" mean="0.189" stddev="0.080"/>
+    <params ls="Complete" mean="0.500" stddev="0.562"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2H-LC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.078" stddev="0.037"/>
+    <params ls="Moderate" mean="0.126" stddev="0.044"/>
+    <params ls="Extensive" mean="0.235" stddev="0.094"/>
+    <params ls="Complete" mean="0.528" stddev="0.472"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.185" stddev="0.050"/>
+    <params ls="Moderate" mean="0.229" stddev="0.066"/>
+    <params ls="Extensive" mean="0.304" stddev="0.123"/>
+    <params ls="Complete" mean="0.986" stddev="1.276"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2M-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.066" stddev="0.038"/>
+    <params ls="Moderate" mean="0.116" stddev="0.060"/>
+    <params ls="Extensive" mean="0.201" stddev="0.098"/>
+    <params ls="Complete" mean="0.557" stddev="0.629"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S3-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.112" stddev="0.040"/>
+    <params ls="Moderate" mean="0.169" stddev="0.050"/>
+    <params ls="Extensive" mean="0.263" stddev="0.068"/>
+    <params ls="Complete" mean="0.440" stddev="0.272"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4H-LC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.066" stddev="0.034"/>
+    <params ls="Moderate" mean="0.110" stddev="0.042"/>
+    <params ls="Extensive" mean="0.183" stddev="0.098"/>
+    <params ls="Complete" mean="0.680" stddev="0.778"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4L-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.167" stddev="0.037"/>
+    <params ls="Moderate" mean="0.200" stddev="0.054"/>
+    <params ls="Extensive" mean="0.281" stddev="0.114"/>
+    <params ls="Complete" mean="1.087" stddev="1.355"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4M-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.060" stddev="0.026"/>
+    <params ls="Moderate" mean="0.086" stddev="0.043"/>
+    <params ls="Extensive" mean="0.165" stddev="0.112"/>
+    <params ls="Complete" mean="0.675" stddev="0.721"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S5H-LC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.053" stddev="0.025"/>
+    <params ls="Moderate" mean="0.109" stddev="0.043"/>
+    <params ls="Extensive" mean="0.196" stddev="0.090"/>
+    <params ls="Complete" mean="0.492" stddev="0.407"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S5L-LC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.087" stddev="0.034"/>
+    <params ls="Moderate" mean="0.131" stddev="0.068"/>
+    <params ls="Extensive" mean="0.227" stddev="0.157"/>
+    <params ls="Complete" mean="0.653" stddev="0.618"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S5M-LC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.054" stddev="0.024"/>
+    <params ls="Moderate" mean="0.099" stddev="0.046"/>
+    <params ls="Extensive" mean="0.179" stddev="0.100"/>
+    <params ls="Complete" mean="0.543" stddev="0.495"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="URML-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.106" stddev="0.038"/>
+    <params ls="Moderate" mean="0.182" stddev="0.056"/>
+    <params ls="Extensive" mean="0.363" stddev="0.124"/>
+    <params ls="Complete" mean="0.511" stddev="0.156"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="URMM-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.130" stddev="0.039"/>
+    <params ls="Moderate" mean="0.212" stddev="0.061"/>
+    <params ls="Extensive" mean="0.321" stddev="0.106"/>
+    <params ls="Complete" mean="0.620" stddev="0.453"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W1-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.122" stddev="0.035"/>
+    <params ls="Moderate" mean="0.256" stddev="0.116"/>
+    <params ls="Extensive" mean="0.639" stddev="0.190"/>
+    <params ls="Complete" mean="1.019" stddev="0.455"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W2-LC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.158" stddev="0.050"/>
+    <params ls="Moderate" mean="0.308" stddev="0.092"/>
+    <params ls="Extensive" mean="0.525" stddev="0.250"/>
+    <params ls="Complete" mean="2.027" stddev="2.387"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1H-MC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.062" stddev="0.026"/>
+    <params ls="Moderate" mean="0.109" stddev="0.042"/>
+    <params ls="Extensive" mean="0.235" stddev="0.085"/>
+    <params ls="Complete" mean="0.561" stddev="0.464"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.153" stddev="0.056"/>
+    <params ls="Moderate" mean="0.262" stddev="0.097"/>
+    <params ls="Extensive" mean="0.486" stddev="0.141"/>
+    <params ls="Complete" mean="0.755" stddev="0.397"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1M-MC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.094" stddev="0.042"/>
+    <params ls="Moderate" mean="0.179" stddev="0.078"/>
+    <params ls="Extensive" mean="0.388" stddev="0.115"/>
+    <params ls="Complete" mean="0.669" stddev="0.381"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2H-MC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.070" stddev="0.030"/>
+    <params ls="Moderate" mean="0.154" stddev="0.068"/>
+    <params ls="Extensive" mean="0.357" stddev="0.130"/>
+    <params ls="Complete" mean="0.642" stddev="0.368"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.164" stddev="0.046"/>
+    <params ls="Moderate" mean="0.289" stddev="0.115"/>
+    <params ls="Extensive" mean="0.552" stddev="0.168"/>
+    <params ls="Complete" mean="0.806" stddev="0.355"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2M-MC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.118" stddev="0.065"/>
+    <params ls="Moderate" mean="0.276" stddev="0.141"/>
+    <params ls="Extensive" mean="0.540" stddev="0.218"/>
+    <params ls="Complete" mean="0.980" stddev="0.690"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="MH-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.130" stddev="0.038"/>
+    <params ls="Moderate" mean="0.196" stddev="0.067"/>
+    <params ls="Extensive" mean="0.353" stddev="0.119"/>
+    <params ls="Complete" mean="0.577" stddev="0.341"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC1-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.142" stddev="0.038"/>
+    <params ls="Moderate" mean="0.203" stddev="0.067"/>
+    <params ls="Extensive" mean="0.484" stddev="0.215"/>
+    <params ls="Complete" mean="0.765" stddev="0.208"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2H-MC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.067" stddev="0.025"/>
+    <params ls="Moderate" mean="0.125" stddev="0.058"/>
+    <params ls="Extensive" mean="0.299" stddev="0.107"/>
+    <params ls="Complete" mean="0.578" stddev="0.356"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.156" stddev="0.047"/>
+    <params ls="Moderate" mean="0.241" stddev="0.086"/>
+    <params ls="Extensive" mean="0.467" stddev="0.134"/>
+    <params ls="Complete" mean="0.688" stddev="0.293"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2M-MC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.113" stddev="0.050"/>
+    <params ls="Moderate" mean="0.220" stddev="0.128"/>
+    <params ls="Extensive" mean="0.438" stddev="0.186"/>
+    <params ls="Complete" mean="0.884" stddev="0.668"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.160" stddev="0.046"/>
+    <params ls="Moderate" mean="0.251" stddev="0.109"/>
+    <params ls="Extensive" mean="0.558" stddev="0.187"/>
+    <params ls="Complete" mean="0.874" stddev="0.393"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1M-MC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.118" stddev="0.061"/>
+    <params ls="Moderate" mean="0.236" stddev="0.132"/>
+    <params ls="Extensive" mean="0.534" stddev="0.210"/>
+    <params ls="Complete" mean="0.928" stddev="0.515"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2H-MC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.070" stddev="0.028"/>
+    <params ls="Moderate" mean="0.128" stddev="0.062"/>
+    <params ls="Extensive" mean="0.321" stddev="0.125"/>
+    <params ls="Complete" mean="0.581" stddev="0.255"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.166" stddev="0.047"/>
+    <params ls="Moderate" mean="0.253" stddev="0.097"/>
+    <params ls="Extensive" mean="0.559" stddev="0.196"/>
+    <params ls="Complete" mean="0.784" stddev="0.227"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2M-MC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.113" stddev="0.058"/>
+    <params ls="Moderate" mean="0.230" stddev="0.135"/>
+    <params ls="Extensive" mean="0.502" stddev="0.227"/>
+    <params ls="Complete" mean="0.861" stddev="0.526"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1H-MC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.089" stddev="0.054"/>
+    <params ls="Moderate" mean="0.153" stddev="0.073"/>
+    <params ls="Extensive" mean="0.348" stddev="0.216"/>
+    <params ls="Complete" mean="0.698" stddev="0.457"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1L-MC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.120" stddev="0.059"/>
+    <params ls="Moderate" mean="0.233" stddev="0.136"/>
+    <params ls="Extensive" mean="0.466" stddev="0.199"/>
+    <params ls="Complete" mean="0.678" stddev="0.331"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1M-MC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.079" stddev="0.035"/>
+    <params ls="Moderate" mean="0.143" stddev="0.063"/>
+    <params ls="Extensive" mean="0.314" stddev="0.139"/>
+    <params ls="Complete" mean="0.556" stddev="0.296"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2H-MC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.081" stddev="0.039"/>
+    <params ls="Moderate" mean="0.141" stddev="0.057"/>
+    <params ls="Extensive" mean="0.355" stddev="0.167"/>
+    <params ls="Complete" mean="0.706" stddev="0.373"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.194" stddev="0.067"/>
+    <params ls="Moderate" mean="0.320" stddev="0.130"/>
+    <params ls="Extensive" mean="0.593" stddev="0.170"/>
+    <params ls="Complete" mean="0.814" stddev="0.352"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2M-MC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.070" stddev="0.035"/>
+    <params ls="Moderate" mean="0.137" stddev="0.076"/>
+    <params ls="Extensive" mean="0.327" stddev="0.130"/>
+    <params ls="Complete" mean="0.531" stddev="0.283"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S3-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.114" stddev="0.034"/>
+    <params ls="Moderate" mean="0.177" stddev="0.062"/>
+    <params ls="Extensive" mean="0.408" stddev="0.142"/>
+    <params ls="Complete" mean="0.635" stddev="0.204"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4H-MC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.070" stddev="0.034"/>
+    <params ls="Moderate" mean="0.124" stddev="0.049"/>
+    <params ls="Extensive" mean="0.282" stddev="0.096"/>
+    <params ls="Complete" mean="0.631" stddev="0.444"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4L-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.177" stddev="0.055"/>
+    <params ls="Moderate" mean="0.274" stddev="0.103"/>
+    <params ls="Extensive" mean="0.449" stddev="0.132"/>
+    <params ls="Complete" mean="0.897" stddev="0.669"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4M-MC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.065" stddev="0.037"/>
+    <params ls="Moderate" mean="0.139" stddev="0.086"/>
+    <params ls="Extensive" mean="0.263" stddev="0.100"/>
+    <params ls="Complete" mean="0.573" stddev="0.413"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W1-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.122" stddev="0.040"/>
+    <params ls="Moderate" mean="0.264" stddev="0.124"/>
+    <params ls="Extensive" mean="0.794" stddev="0.314"/>
+    <params ls="Complete" mean="1.308" stddev="0.375"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W2-MC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.166" stddev="0.064"/>
+    <params ls="Moderate" mean="0.375" stddev="0.141"/>
+    <params ls="Extensive" mean="0.699" stddev="0.169"/>
+    <params ls="Complete" mean="1.434" stddev="1.054"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1H-PC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.050" stddev="0.019"/>
+    <params ls="Moderate" mean="0.080" stddev="0.032"/>
+    <params ls="Extensive" mean="0.136" stddev="0.066"/>
+    <params ls="Complete" mean="0.441" stddev="0.513"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.137" stddev="0.035"/>
+    <params ls="Moderate" mean="0.186" stddev="0.052"/>
+    <params ls="Extensive" mean="0.263" stddev="0.083"/>
+    <params ls="Complete" mean="0.571" stddev="0.518"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C1M-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.068" stddev="0.031"/>
+    <params ls="Moderate" mean="0.124" stddev="0.062"/>
+    <params ls="Extensive" mean="0.220" stddev="0.082"/>
+    <params ls="Complete" mean="0.559" stddev="0.547"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2H-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.054" stddev="0.022"/>
+    <params ls="Moderate" mean="0.108" stddev="0.050"/>
+    <params ls="Extensive" mean="0.195" stddev="0.074"/>
+    <params ls="Complete" mean="0.516" stddev="0.500"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.137" stddev="0.043"/>
+    <params ls="Moderate" mean="0.205" stddev="0.061"/>
+    <params ls="Extensive" mean="0.287" stddev="0.085"/>
+    <params ls="Complete" mean="0.616" stddev="0.515"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C2M-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.064" stddev="0.027"/>
+    <params ls="Moderate" mean="0.133" stddev="0.083"/>
+    <params ls="Extensive" mean="0.222" stddev="0.121"/>
+    <params ls="Complete" mean="0.615" stddev="0.590"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C3H-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.045" stddev="0.016"/>
+    <params ls="Moderate" mean="0.088" stddev="0.042"/>
+    <params ls="Extensive" mean="0.167" stddev="0.060"/>
+    <params ls="Complete" mean="0.381" stddev="0.315"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C3L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.114" stddev="0.033"/>
+    <params ls="Moderate" mean="0.180" stddev="0.047"/>
+    <params ls="Extensive" mean="0.262" stddev="0.070"/>
+    <params ls="Complete" mean="0.461" stddev="0.290"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="C3M-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.051" stddev="0.017"/>
+    <params ls="Moderate" mean="0.108" stddev="0.072"/>
+    <params ls="Extensive" mean="0.193" stddev="0.097"/>
+    <params ls="Complete" mean="0.456" stddev="0.383"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="MH-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.106" stddev="0.026"/>
+    <params ls="Moderate" mean="0.150" stddev="0.031"/>
+    <params ls="Extensive" mean="0.181" stddev="0.088"/>
+    <params ls="Complete" mean="0.666" stddev="0.810"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC1-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.109" stddev="0.038"/>
+    <params ls="Moderate" mean="0.167" stddev="0.047"/>
+    <params ls="Extensive" mean="0.288" stddev="0.092"/>
+    <params ls="Complete" mean="0.424" stddev="0.168"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2H-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.053" stddev="0.018"/>
+    <params ls="Moderate" mean="0.088" stddev="0.041"/>
+    <params ls="Extensive" mean="0.160" stddev="0.061"/>
+    <params ls="Complete" mean="0.471" stddev="0.513"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.138" stddev="0.033"/>
+    <params ls="Moderate" mean="0.176" stddev="0.049"/>
+    <params ls="Extensive" mean="0.245" stddev="0.075"/>
+    <params ls="Complete" mean="0.539" stddev="0.467"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="PC2M-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.061" stddev="0.020"/>
+    <params ls="Moderate" mean="0.094" stddev="0.054"/>
+    <params ls="Extensive" mean="0.167" stddev="0.113"/>
+    <params ls="Complete" mean="0.576" stddev="0.632"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.140" stddev="0.037"/>
+    <params ls="Moderate" mean="0.197" stddev="0.058"/>
+    <params ls="Extensive" mean="0.297" stddev="0.084"/>
+    <params ls="Complete" mean="0.588" stddev="0.389"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM1M-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.063" stddev="0.040"/>
+    <params ls="Moderate" mean="0.123" stddev="0.081"/>
+    <params ls="Extensive" mean="0.219" stddev="0.098"/>
+    <params ls="Complete" mean="0.587" stddev="0.488"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2H-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.053" stddev="0.019"/>
+    <params ls="Moderate" mean="0.089" stddev="0.044"/>
+    <params ls="Extensive" mean="0.185" stddev="0.068"/>
+    <params ls="Complete" mean="0.421" stddev="0.352"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.142" stddev="0.043"/>
+    <params ls="Moderate" mean="0.200" stddev="0.054"/>
+    <params ls="Extensive" mean="0.297" stddev="0.082"/>
+    <params ls="Complete" mean="0.498" stddev="0.291"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="RM2M-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.061" stddev="0.024"/>
+    <params ls="Moderate" mean="0.112" stddev="0.081"/>
+    <params ls="Extensive" mean="0.206" stddev="0.113"/>
+    <params ls="Complete" mean="0.528" stddev="0.486"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1H-PC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.066" stddev="0.042"/>
+    <params ls="Moderate" mean="0.111" stddev="0.062"/>
+    <params ls="Extensive" mean="0.200" stddev="0.116"/>
+    <params ls="Complete" mean="0.473" stddev="0.497"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1L-PC">
+    <imls imt="SA(1.5)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.062" stddev="0.018"/>
+    <params ls="Moderate" mean="0.103" stddev="0.063"/>
+    <params ls="Extensive" mean="0.177" stddev="0.092"/>
+    <params ls="Complete" mean="0.358" stddev="0.328"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S1M-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.060" stddev="0.027"/>
+    <params ls="Moderate" mean="0.103" stddev="0.047"/>
+    <params ls="Extensive" mean="0.166" stddev="0.062"/>
+    <params ls="Complete" mean="0.364" stddev="0.363"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2H-PC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.060" stddev="0.031"/>
+    <params ls="Moderate" mean="0.104" stddev="0.043"/>
+    <params ls="Extensive" mean="0.211" stddev="0.082"/>
+    <params ls="Complete" mean="0.422" stddev="0.317"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.163" stddev="0.044"/>
+    <params ls="Moderate" mean="0.221" stddev="0.064"/>
+    <params ls="Extensive" mean="0.293" stddev="0.091"/>
+    <params ls="Complete" mean="0.606" stddev="0.565"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S2M-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.052" stddev="0.028"/>
+    <params ls="Moderate" mean="0.093" stddev="0.055"/>
+    <params ls="Extensive" mean="0.184" stddev="0.081"/>
+    <params ls="Complete" mean="0.399" stddev="0.377"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S3-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.099" stddev="0.028"/>
+    <params ls="Moderate" mean="0.141" stddev="0.044"/>
+    <params ls="Extensive" mean="0.240" stddev="0.071"/>
+    <params ls="Complete" mean="0.366" stddev="0.172"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4H-PC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.052" stddev="0.026"/>
+    <params ls="Moderate" mean="0.093" stddev="0.042"/>
+    <params ls="Extensive" mean="0.157" stddev="0.060"/>
+    <params ls="Complete" mean="0.476" stddev="0.485"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4L-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.146" stddev="0.039"/>
+    <params ls="Moderate" mean="0.185" stddev="0.047"/>
+    <params ls="Extensive" mean="0.245" stddev="0.086"/>
+    <params ls="Complete" mean="0.751" stddev="0.822"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S4M-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.048" stddev="0.022"/>
+    <params ls="Moderate" mean="0.077" stddev="0.043"/>
+    <params ls="Extensive" mean="0.138" stddev="0.076"/>
+    <params ls="Complete" mean="0.483" stddev="0.510"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S5H-PC">
+    <imls imt="SA(2.1)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.042" stddev="0.018"/>
+    <params ls="Moderate" mean="0.090" stddev="0.040"/>
+    <params ls="Extensive" mean="0.174" stddev="0.066"/>
+    <params ls="Complete" mean="0.371" stddev="0.274"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S5L-PC">
+    <imls imt="SA(1.2)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.074" stddev="0.028"/>
+    <params ls="Moderate" mean="0.113" stddev="0.054"/>
+    <params ls="Extensive" mean="0.185" stddev="0.118"/>
+    <params ls="Complete" mean="0.487" stddev="0.446"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="S5M-PC">
+    <imls imt="SA(1.8)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.042" stddev="0.019"/>
+    <params ls="Moderate" mean="0.086" stddev="0.046"/>
+    <params ls="Extensive" mean="0.155" stddev="0.072"/>
+    <params ls="Complete" mean="0.387" stddev="0.330"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="URML-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.081" stddev="0.033"/>
+    <params ls="Moderate" mean="0.158" stddev="0.048"/>
+    <params ls="Extensive" mean="0.313" stddev="0.124"/>
+    <params ls="Complete" mean="0.463" stddev="0.148"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="URMM-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.109" stddev="0.034"/>
+    <params ls="Moderate" mean="0.184" stddev="0.053"/>
+    <params ls="Extensive" mean="0.287" stddev="0.076"/>
+    <params ls="Complete" mean="0.469" stddev="0.265"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W1-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.099" stddev="0.034"/>
+    <params ls="Moderate" mean="0.202" stddev="0.075"/>
+    <params ls="Extensive" mean="0.541" stddev="0.196"/>
+    <params ls="Complete" mean="0.855" stddev="0.351"/>
+  </fragilityFunction>
+
+  <fragilityFunction format="continuous" id="W2-PC">
+    <imls imt="SA(0.9)" minIML="0.05" maxIML="3.0"/>
+    <params ls="Slight" mean="0.134" stddev="0.045"/>
+    <params ls="Moderate" mean="0.279" stddev="0.087"/>
+    <params ls="Extensive" mean="0.461" stddev="0.166"/>
+    <params ls="Complete" mean="1.386" stddev="1.466"/>
+  </fragilityFunction>
+
+</fragilityModel>
+
+</nrml>
