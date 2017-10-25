@@ -7,6 +7,8 @@ import numpy as np
 import time
 from tqdm import tqdm
 
+seed = 420
+np.random.seed(seed)
 
 # data prep
 print('preparing data')
@@ -30,7 +32,7 @@ mainshock_ruptures = {trace['properties']['event']: trace_to_rupture(trace)
 mainshock_ruptures_file = "../data/mainshock_ruptures.csv"
 
 print('calculating mainshock ground motions')
-mainshock_gms = {k: ground_motion_from_rupture(rup, sites=sites)
+mainshock_gms = {k: ground_motion_from_rupture(rup, sites=sites, seed=seed)
                  for k, rup in tqdm(mainshock_ruptures.items())}
 mainshock_gms_file = "../data/mainshock_gms.csv"
 
