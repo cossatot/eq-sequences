@@ -20,7 +20,7 @@ try:
 except ImportError:
     _joblib = False
 
-np.random.seed(42)
+np.random.seed(420)
 
 
 #####

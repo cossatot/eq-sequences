@@ -1,11 +1,11 @@
 import pandas as pd
 
-mainshock_output_file = "../calcs/mainshocks/agg_losses-rlz-000_1.csv"
-aftershock_output_file = "../calcs/aftershocks/agg_losses-rlz-000_2.csv"
-mainshock_ruptures_file = "../calcs/mainshocks/mainshock_ruptures.csv"
-aftershock_ruptures_file = "../calcs/aftershocks/aftershock_ruptures.csv"
-mainshock_losses_file = "../calcs/mainshocks/mainshock_losses.csv"
-aftershock_losses_file = "../calcs/aftershocks/aftershock_losses.csv"
+mainshock_output_file = "../calculations/mainshocks/agg_losses-rlz-000_1.csv"
+aftershock_output_file = "../calculations/aftershocks/agg_losses-rlz-000_2.csv"
+mainshock_ruptures_file = "../calculations/mainshocks/mainshock_ruptures.csv"
+aftershock_ruptures_file = "../calculations/aftershocks/aftershock_ruptures.csv"
+mainshock_losses_file = "../calculations/mainshocks/mainshock_losses.csv"
+aftershock_losses_file = "../calculations/aftershocks/aftershock_losses.csv"
 
 mainshock_ruptures_df = pd.read_csv(mainshock_ruptures_file, index_col=0)
 aftershock_ruptures_df = pd.read_csv(aftershock_ruptures_file, index_col=0)

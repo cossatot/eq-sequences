@@ -17,6 +17,10 @@ with open(fault_geojson, 'r') as f:
     trace_dict = json.load(f)
     traces = trace_dict['features']
 
+
+print(np.random.random())
+print(traces[0]['properties']['rupture_name'], 
+      traces[-1]['properties']['rupture_name'])
 # study area
 print('making sites')
 sites_file = "../data/nw_washington_sites.csv"
@@ -29,31 +33,38 @@ sites = SiteCollection([Site(location=Point(lon, lat), vs30=760.,
 print('making ruptures')
 mainshock_ruptures = {trace['properties']['event']: trace_to_rupture(trace)
                       for trace in tqdm(traces)}
-mainshock_ruptures_file = "../data/mainshock_ruptures.csv"
+mainshock_ruptures_file = "../results/mainshock_ruptures.csv"
 
+print(np.random.random())
 print('calculating mainshock ground motions')
-mainshock_gms = {k: ground_motion_from_rupture(rup, sites=sites, seed=seed)
-                 for k, rup in tqdm(mainshock_ruptures.items())}
-mainshock_gms_file = "../data/mainshock_gms.csv"
+mainshock_gms = OrderedDict((k, ground_motion_from_rupture(rup, sites=sites,
+                                                           seed=seed)) for k,
+                            rup in tqdm(sorted(mainshock_ruptures.items())))
+
+mainshock_gms_file = "../results/mainshock_gms.csv"
 
 # aftershocks
 n_days = 1000 # days after event
 cutoff_mag = 4.5
 
 print('making aftershock sequences')
-aftershock_ruptures = {k: make_aftershock_rupture_sequence(rup, n_days,
-                                                     min_return_mag=cutoff_mag)
-                       for k, rup in tqdm(mainshock_ruptures.items())}
-aftershock_ruptures_file = "../data/aftershock_ruptures.csv"
+print(np.random.random())
+aftershock_ruptures = OrderedDict((k,  make_aftershock_rupture_sequence(rup, n_days,
+                                                     min_return_mag=cutoff_mag))
+                       for k, rup in tqdm(sorted(mainshock_ruptures.items())))
+aftershock_ruptures_file = "../results/aftershock_ruptures.csv"
 
+print(np.random.random())
+print(list(aftershock_ruptures.keys())[-1])
 # ground motions in parallel
 print('calculating aftershock ground motions')
-for k in tqdm(aftershock_ruptures.keys()):
+for k in tqdm(sorted(aftershock_ruptures.keys())):
     calc_aftershock_gms(aftershock_ruptures[k], sites, n_jobs=-1, _joblib=False)
-aftershock_gms_file = "../data/aftershock_gms.csv"
+aftershock_gms_file = "../results/aftershock_gms.csv"
 eid = 0
 mid = 0
 
+print(np.random.random())
 print('writing ruptures and ground motions')
 with open(mainshock_gms_file, 'w') as mgfile, \
      open(mainshock_ruptures_file, 'w') as mrfile, \
@@ -65,7 +76,7 @@ with open(mainshock_gms_file, 'w') as mgfile, \
     fga = csv.writer(agfile)
     frm.writerow(["eid", "event", "mag", "lon", "lat", "depth"])
     fgm.writerow(["rlzi", "sid", "eid", "gmv_PGA"])
-    fra.writerow(["eid", "aid", "mainshock", "mag", "lon", "lat", "depth"])
+    fra.writerow(["eid", "aid", "mainshock", "mag", "lon", "lat", "depth", "day"])
     fga.writerow(["rlzi", "sid", "eid", "gmv_PGA"])
     for k, rup in tqdm(mainshock_ruptures.items()):
         aid = 0
@@ -85,7 +96,7 @@ with open(mainshock_gms_file, 'w') as mgfile, \
         for i in aftershock_ruptures[k].keys():
             arup = aftershock_ruptures[k][i]
             fra.writerow([eid, aid, k, arup["Mw"],
-                          arup["lon"], arup["lat"], arup["depth"]])
+                          arup["lon"], arup["lat"], arup["depth"], arup["day"]])
             agmf = arup["ground_motion"]
             for (sid, _), gmv in np.ndenumerate(agmf[PGA()]):
                 fga.writerow([0, sid, eid, gmv])

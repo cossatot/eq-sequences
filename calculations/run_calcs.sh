@@ -1,7 +1,10 @@
 #!/bin/bash
 
-cp ../data/mainshock_ruptures.csv mainshocks/
-cp ../data/mainshock_gms.csv mainshocks/
+rm -f mainshock/agg*.csv
+rm -f aftershocks/agg*.csv
+
+cp ../results/mainshock_ruptures.csv mainshocks/
+cp ../results/mainshock_gms.csv mainshocks/
 cd mainshocks/
 echo "=============================="
 echo "Running mainshock calculations"
@@ -10,8 +13,8 @@ oq engine --run calc_losses_nw_wa.ini
 oq export agg_loss_table
 cd -
 
-cp ../data/aftershock_ruptures.csv aftershocks/
-cp ../data/aftershock_gms.csv aftershocks/
+cp ../results/aftershock_ruptures.csv aftershocks/
+cp ../results/aftershock_gms.csv aftershocks/
 cd aftershocks/
 echo "==============================="
 echo "Running aftershock calculations"
@@ -20,4 +23,5 @@ oq engine --run calc_losses_nw_wa.ini
 oq export agg_loss_table
 cd -
 
-python ../scripts/calc_puget_sequence_losses.py
+#python ../scripts/calc_puget_sequence_losses.py
+
